@@ -1,0 +1,40 @@
+h1{
+    text-align: center;
+}
+
+.inputdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.inputfield{
+    width:60%;
+    height:30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.addBtn{
+    height: 32px;
+    width:100px;
+    border: none;
+    border-radius:5px ;
+}
+
+.inputfield:focus{
+    outline: none;
+}
+
+.todoItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    border:1px solid red;
+}
+
+.itemtag{
+    
+}
