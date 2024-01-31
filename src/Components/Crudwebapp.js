@@ -4,7 +4,7 @@ function Crudwebapp() {
   return (
     <div className='crudContainer'>
         <InputSection />
-    
+        
     </div>
   ) 
 }
