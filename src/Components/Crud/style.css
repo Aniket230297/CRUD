@@ -33,13 +33,24 @@ h1{
     justify-content: center;
     height:50px;
     border:1px solid red;
-    
+    gap:20px;
+    margin-top: 10px;
 }
 
 .itemtag{
     width:60%;
-    height:30px;
+    height:25px;
     border: 1px solid black;
     background-color:#000;
     color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 44px;
+}
+
+.deletebtn, .updatebtn{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
 }

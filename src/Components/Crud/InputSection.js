@@ -22,7 +22,6 @@ function InputSection() {
   };
 
   const handleDelete = (index) => {
-    // Placeholder for delete functionality
     const confirmDelete = window.confirm("Are you sure you want to delete this todo?");
     if (confirmDelete) {
       const updatedTodos = [...newtodo];
@@ -43,8 +42,8 @@ function InputSection() {
           newtodo && newtodo.map((item, i)=>(
             <div className="todoItem">
             <p className="itemtag" key={i}>{item}</p>
-            <button onClick={() => handleUpdate(i)}>Update</button>
-            <button onClick={() => handleDelete(i)}>Delete</button>
+            <button className="updatebtn" onClick={() => handleUpdate(i)}>Update</button>
+            <button className="deletebtn" onClick={() => handleDelete(i)}>Delete</button>
             </div>
           ))
         }
