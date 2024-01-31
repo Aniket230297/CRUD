@@ -12,6 +12,25 @@ function InputSection() {
   }
   console.log(value);
 
+  const handleUpdate = (index) => {
+    const updatedTodo = prompt("Update todo:", newtodo[index]);
+    if (updatedTodo !== null) {
+      const updatedTodos = [...newtodo];
+      updatedTodos[index] = updatedTodo;
+      setNewtodo(updatedTodos);
+    }
+  };
+
+  const handleDelete = (index) => {
+    // Placeholder for delete functionality
+    const confirmDelete = window.confirm("Are you sure you want to delete this todo?");
+    if (confirmDelete) {
+      const updatedTodos = [...newtodo];
+      updatedTodos.splice(index, 1);
+      setNewtodo(updatedTodos);
+    }
+  };
+
   return (
     <div className='inputContainer'>
           <h1>CRUD Web App</h1>
@@ -24,8 +43,8 @@ function InputSection() {
           newtodo && newtodo.map((item, i)=>(
             <div className="todoItem">
             <p className="itemtag" key={i}>{item}</p>
-            <button>Update</button>
-            <button>Delete</button>
+            <button onClick={() => handleUpdate(i)}>Update</button>
+            <button onClick={() => handleDelete(i)}>Delete</button>
             </div>
           ))
         }
